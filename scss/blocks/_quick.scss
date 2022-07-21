@@ -1,0 +1,247 @@
+.quick {
+  padding-top: 53px;
+  background-image: url("../img/quick-bg.png");
+  background-repeat: no-repeat;
+  background-size: 2323px 390px;
+  background-position: top center;
+}
+
+.quick-darkmode {
+  background-image: url("../img/quick-bg-dark.png");
+}
+
+.quick__inner {
+  text-align: center;
+}
+
+.quick__title {
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: var(--cl-text);
+}
+
+.quick__text-box {
+  max-width: 542px;
+  margin: 0 auto;
+}
+
+.quick__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--cl-text);
+}
+
+.quick__content {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quick__left-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quick__left-item {
+  display: flex;
+  align-items: center;
+}
+
+.quick__left-item img {
+  margin-right: 16px;
+}
+
+.quick__left-item:nth-child(2) {
+  margin-top: 24px;
+  flex-direction: row-reverse;
+}
+
+.quick__left-item:nth-child(2)>img {
+  margin-left: 16px;
+  margin-right: 0;
+}
+
+.quick__left-content {
+  position: relative;
+  padding: 15px 24px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
+  border-radius: 26.5px;
+  text-align: center;
+  color: #2f281e;
+}
+
+.quick__left-content::before {
+  position: absolute;
+  bottom: -5px;
+  left: 30px;
+  width: 17px;
+  height: 17px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  content: "";
+}
+
+.quick__left-content::after {
+  position: absolute;
+  bottom: -15px;
+  left: 20px;
+  width: 9px;
+  height: 9px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  content: "";
+}
+
+.quick__left-content--second::before {
+  left: calc(50% + 55px);
+}
+
+.quick__left-content--second::after {
+  left: calc(50% + 75px);
+}
+
+.quick__right-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quick__right-item {
+  display: flex;
+  align-items: center;
+}
+
+.quick__right-item img {
+  margin-left: 16px;
+}
+
+.quick__right-item:nth-child(2) {
+  margin-top: 24px;
+  flex-direction: row-reverse;
+}
+
+.quick__right-item:nth-child(2)>img {
+  margin-right: 16px;
+  margin-left: 0;
+}
+
+.quick__right-content {
+  position: relative;
+  padding: 15px 24px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
+  border-radius: 26.5px;
+  text-align: center;
+  color: #2f281e;
+}
+
+.quick__right-content::before {
+  position: absolute;
+  bottom: -5px;
+  right: 30px;
+  width: 17px;
+  height: 17px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  content: "";
+}
+
+.quick__right-content::after {
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+  width: 9px;
+  height: 9px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  content: "";
+}
+
+.quick__right-content--second::before {
+  right: calc(50% + 90px);
+}
+
+.quick__right-content--second::after {
+  right: calc(50% + 105px);
+}
+
+.quick__link {
+  display: inline-block;
+  margin-top: 48px;
+  padding: 15px 31px;
+  background-color: #02897a;
+  border: 1px solid #02897a;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  border-radius: 7px;
+}
+
+.quick__link:hover {
+  background-color: #ffffff;
+  color: #02897a;
+}
+
+@include responsible(823px) {
+  .quick {
+    background-size: 1280px 213px;
+  }
+
+  .quick__content {
+    flex-direction: column;
+  }
+
+  .quick__left-item:nth-child(2) {
+    margin-top: 32px;
+  }
+
+  .quick__left-content {
+    padding: 11px 17px;
+  }
+
+  .quick__right-list {
+    flex-direction: column-reverse;
+  }
+
+  .quick__right-content {
+    padding: 11px 17px;
+  }
+
+  .quick__right-item:nth-child(1) {
+    margin-top: 32px;
+  }
+}
+
+@include responsible(424px) {
+  .quick__content img {
+    width: 89px;
+    height: 89px;
+  }
+
+  .quick__left-content::before {
+    display: none;
+  }
+
+  .quick__left-content::after {
+    display: none;
+  }
+
+  .quick__right-content::before {
+    display: none;
+  }
+
+  .quick__right-content::after {
+    display: none;
+  }
+
+  .quick__link {
+    margin-top: 32px;
+  }
+}

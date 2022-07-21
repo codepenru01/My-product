@@ -1,0 +1,160 @@
+.price__title {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 51px;
+  text-align: center;
+  color: var(--cl-text);
+}
+
+.price__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--cl-text);
+}
+
+.price__list {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.price__item {
+  padding: 32px 0;
+  width: 323px;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.price__item-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 40px;
+  color: #22343d;
+}
+
+.price__item-discription {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  margin-bottom: 32px;
+  color: #22343d;
+
+}
+
+.price__pricing {
+  margin-bottom: 32px;
+  position: relative;
+  font-weight: 700;
+  font-size: 76px;
+  line-height: 100px;
+  letter-spacing: 0.2px;
+  color: #02897A;
+
+}
+
+.price__pricing::after {
+  position: absolute;
+  top: 20px;
+  right: calc(50% - 5px);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.1px;
+  color: #02897A;
+  content: "$";
+}
+
+.price__pricing sub {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1px;
+  color: #AFAFAF;
+}
+
+.price__qualification {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  color: #22343d;
+}
+
+.price__qualification+.price__qualification {
+  margin-top: 16px;
+}
+
+.price__link {
+  margin-top: 38px;
+  padding: 11px 19px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  background-color: #02897a;
+  border-radius: 8px;
+}
+
+.price__item:hover {
+  background-color: #02897a;
+}
+
+.price__item:hover .price__item-title {
+  color: #ffffff;
+}
+
+.price__item:hover .price__item-discription {
+  color: #ffffff;
+}
+
+.price__item:hover .price__pricing {
+  color: #ffffff;
+}
+
+.price__item:hover .price__pricing::after {
+  color: #ffffff;
+}
+
+.price__item:hover .price__qualification {
+  color: #ffffff;
+}
+
+.price__item:hover .price__link {
+  color: #02897a;
+  background-color: #ffffff;
+}
+
+@include responsible(1009px) {
+  .price__list {
+    justify-content: space-around;
+  }
+
+  .price__item:last-child {
+    margin-top: 32px;
+  }
+}
+
+@include responsible(686px) {
+  .price__item:nth-child(2) {
+    margin-top: 32px;
+  }
+}
+
+@include responsible(369px) {
+  .price__item {
+    width: 100%;
+  }
+}
